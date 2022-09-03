@@ -6,7 +6,7 @@
 /*   By: jose <jose@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 19:35:02 by jomoreno          #+#    #+#             */
-/*   Updated: 2022/08/27 18:53:57 by jose             ###   ########.fr       */
+/*   Updated: 2022/09/01 23:46:49 by jose             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,19 +18,19 @@ char	*ft_strjoin(char const *str, char const *buffer, int n)
 	int		j;
 	char	*s3;
 
-	s3 = malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char));
+	s3 = malloc((ft_strlen(str) + ft_strlen(buffer) + 1) * sizeof(char));
 	if (!s3)
 		return (NULL);
 	i = 0;
-	while (s1[i] != '\0')
+	while (str[i] != '\0')
 	{
-		s3[i] = s1[i];
+		s3[i] = str[i];
 		i++;
 	}
 	j = 0;
-	while (s2[j] != '\0')
+	while (buffer[j] != '\0')
 	{
-		s3[i] = s2[j];
+		s3[i] = buffer[j];
 		i++;
 		j++;
 	}
@@ -38,4 +38,15 @@ char	*ft_strjoin(char const *str, char const *buffer, int n)
 	return (s3);
 }
 
-ft_line(char *str, )
+int	ft_line(char *str, int ch_read, char *buffer)
+{
+	int	i;
+
+	if (ch_read < BUFFER_SIZE)
+		return (0);
+	i = 0;
+	while (buffer[i] != '\n')
+	{
+		str[i] = buffer[i];
+	}
+}

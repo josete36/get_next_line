@@ -6,7 +6,7 @@
 /*   By: jose <jose@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 19:35:11 by jomoreno          #+#    #+#             */
-/*   Updated: 2022/08/27 18:08:34 by jose             ###   ########.fr       */
+/*   Updated: 2022/09/01 19:51:07 by jose             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,5 +17,6 @@
 
 char	*get_next_line(int fd);
 char	*ft_strjoin(char const *str, char const *buffer, int n);
+int		ft_line(char *str, int ch_read);
 
 #endif
