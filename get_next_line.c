@@ -6,7 +6,7 @@
 /*   By: jose <jose@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 19:35:07 by jomoreno          #+#    #+#             */
-/*   Updated: 2022/09/01 20:34:32 by jose             ###   ########.fr       */
+/*   Updated: 2022/09/04 10:53:17 by jose             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ char	*get_next_line(int fd)
 	char		*buffer;
 	int			ch_read;
 	
+	ch_read = 0;
 	buffer = BUFFER_SIZE;
 	buffer[BUFFER_SIZE + 1] = '\0';
 	if (fd < 0 || BUFFER_SIZE <= 0)
@@ -31,9 +32,9 @@ char	*get_next_line(int fd)
 			return (NULL);
 		if (ch_read == 0)
 		{
-			free (buffer);
+			free (str);
 			return (NULL);
 		}
-	str = ft_strjoin(char const *str, char const *buffer, int ch_read)
+	str = ft_strjoin(char const *str, char const *buffer)
 	}
 }

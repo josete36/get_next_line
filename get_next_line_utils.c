@@ -6,13 +6,13 @@
 /*   By: jose <jose@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 19:35:02 by jomoreno          #+#    #+#             */
-/*   Updated: 2022/09/01 23:46:49 by jose             ###   ########.fr       */
+/*   Updated: 2022/09/04 10:45:05 by jose             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-char	*ft_strjoin(char const *str, char const *buffer, int n)
+char	*ft_strjoin(char const *str, char const *buffer)
 {
 	int		i;
 	int		j;
@@ -38,15 +38,17 @@ char	*ft_strjoin(char const *str, char const *buffer, int n)
 	return (s3);
 }
 
-int	ft_line(char *str, int ch_read, char *buffer)
+int	ft_line(char *str, int ch_read)
 {
 	int	i;
 
 	if (ch_read < BUFFER_SIZE)
 		return (0);
 	i = 0;
-	while (buffer[i] != '\n')
+	while (str)
 	{
-		str[i] = buffer[i];
+		if (str[i] == '\n')
+			return (1);
+		i++;
 	}
 }
