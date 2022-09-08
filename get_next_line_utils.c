@@ -6,11 +6,23 @@
 /*   By: macjose <macjose@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 19:35:02 by jomoreno          #+#    #+#             */
-/*   Updated: 2022/09/08 12:26:04 by macjose          ###   ########.fr       */
+/*   Updated: 2022/09/08 12:37:53 by macjose          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
+
+size_t	ft_strlen(const char *str)
+{
+	size_t	i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
+}
 
 char	*ft_strjoin(char const *str, char const *buffer)
 {
