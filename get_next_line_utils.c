@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jose <jose@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: macjose <macjose@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 19:35:02 by jomoreno          #+#    #+#             */
-/*   Updated: 2022/09/04 10:45:05 by jose             ###   ########.fr       */
+/*   Updated: 2022/09/08 12:26:04 by macjose          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int	ft_line(char *str, int ch_read)
 {
 	int	i;
 
-	if (ch_read < BUFFER_SIZE)
+	if (!str)
 		return (0);
 	i = 0;
 	while (str)
@@ -51,4 +51,7 @@ int	ft_line(char *str, int ch_read)
 			return (1);
 		i++;
 	}
+	if (ch_read < BUFFER_SIZE)
+		return (1);
+	return (0);
 }
